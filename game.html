@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>记忆力锻炼</title>
+    <title>Memory Test</title>
     <style>
         body, html {
             margin: 0;
@@ -155,19 +155,20 @@
 </head>
 <body>
     <div class="container start-screen">
-        <h1>记忆力锻炼</h1>
+        <h1>Memory Test</h1>
         <div class="rules">
-            <p>游戏规则：</p>
-            <p>本游戏共有20关，每一关时长5秒。</p>
-            <p>从1位数开始，每一关出现一个对应位数的数字。</p>
-            <p>请在5秒倒计时内记住屏幕上显示的数字。</p>
-            <p>倒计时结束后，输入您记住的数字并点击提交。</p>
-            <p>游戏顶部会显示您的闯关进度，答对显示绿色，答错显示红色。</p>
-            <p>完成20关后，将显示您的总分。</p>
-            <p>得分计算：第一关10分，第二关20分，以此类推，每关分数是关卡的10倍，总分1050分。</p>
-            <p>得分840分以上为优秀，分数越高越优秀！</p>
+            <p>Game Rules:</p>
+            <p>This game has 20 levels, each lasting 5 seconds.</p>
+            <p>Starting with a 1-digit number, each level will display a number with a corresponding number of digits.</p>
+            <p>You need to memorize the displayed number within the 5-second countdown.</p>
+            <p>After the countdown ends, an input box will appear where you need to enter the number you memorized and click the submit button.</p>
+            <p>The game will check if your answer is correct.</p>
+            <p>At the top of the game, there is a row of 10 cells, each representing a level. A green cell indicates a correct answer, and a red cell indicates an incorrect answer.</p>
+            <p>After completing all 20 levels, your total score will be displayed.</p>
+            <p>Scoring: Level 1: 10 points, Level 2: 20 points, Level 10: 100 points, and so on. The score for each level is 10 times the level number, with a total possible score of 1050 points.</p>
+            <p>A score of 840 points or higher is considered excellent, and the higher your score, the more excellent your memory!</p>
         </div>
-        <button class="start-button" onclick="startGame()">开始游戏</button>
+        <button class="start-button" onclick="startGame()">Start Game</button>
     </div>
 
     <div class="game-area">
@@ -176,16 +177,16 @@
         <div class="number-display"></div>
         <div class="timer"></div>
         <div class="input-area">
-            <input type="text" id="user-input" placeholder="输入你记住的数字">
-            <button class="submit-button" onclick="submitAnswer()">提交</button>
+            <input type="text" id="user-input" placeholder="Enter the number you memorized">
+            <button class="submit-button" onclick="submitAnswer()">Submit</button>
         </div>
     </div>
 
     <div class="result-area">
-        <h2>游戏结束！</h2>
+        <h2>Game Over!</h2>
         <p class="final-score"></p>
         <p class="evaluation"></p>
-        <button class="restart-button" onclick="restartGame()">重新开始</button>
+        <button class="restart-button" onclick="restartGame()">Restart Game</button>
     </div>
 
     <script>
@@ -234,10 +235,10 @@
 
         function startTimer() {
             timeLeft = 5;
-            timerDisplay.textContent = `剩余时间：${timeLeft}秒`;
+            timerDisplay.textContent = `Time left: ${timeLeft} seconds`;
             timerInterval = setInterval(() => {
                 timeLeft--;
-                timerDisplay.textContent = `剩余时间：${timeLeft}秒`;
+                timerDisplay.textContent = `Time left: ${timeLeft} seconds`;
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     numberDisplay.textContent = '';
@@ -274,25 +275,25 @@
             }
 
             currentLevel++;
-            setTimeout(nextLevel, 500); // 短暂延迟后进入下一关
+            setTimeout(nextLevel, 500); // Short delay before the next level
         }
 
         function endGame() {
             gameArea.style.display = 'none';
             resultArea.style.display = 'block';
-            finalScoreDisplay.textContent = `您的总分：${score} / 1050`;
+            finalScoreDisplay.textContent = `Your total score: ${score} / 1050`;
             let evaluation = '';
             if (score >= 840) {
-                evaluation = '优秀！继续保持！';
+                evaluation = 'Excellent! Keep up the great work!';
                 if (score >= 950) {
-                    evaluation = '非常优秀！简直是记忆力超人！';
+                    evaluation = 'Outstanding! You have an exceptional memory!';
                 } else if (score >= 900) {
-                    evaluation = '极其优秀！你的记忆力令人赞叹！';
+                    evaluation = 'Very impressive! Your memory skills are top-notch!';
                 }
             } else if (score >= 630) {
-                evaluation = '良好！再接再厉！';
+                evaluation = 'Good job! With more practice, you can improve further.';
             } else {
-                evaluation = '还需要多加练习哦！';
+                evaluation = 'Keep practicing! Memory skills can be developed with effort.';
             }
             evaluationDisplay.textContent = evaluation;
         }
