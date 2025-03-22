@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wiifrdth=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Test - Train Your Brain & Improve Recall</title>
     <meta name="description" content="Boost your memory skills with our fun and engaging Memory Test game online. Challenge yourself through 20 levels of increasing difficulty. Track your progress and see how your memory improves!">
     <meta name="keywords" content="memory test, brain training, memory game, improve memory, online game, recall skills">
-    <link rel="canonical" href="https://memorytest.8384857.xyz/">
+    <link rel="canonical" href="https://memorytest-bwb.pages.dev/">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,7 +28,7 @@
             color: white;
             padding: 40px 0;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px; /* Reduced margin */
         }
 
         header h1 {
@@ -41,21 +41,21 @@
             opacity: 0.8;
         }
 
-        .game-embed {
+        .game-section {
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        .game-embed iframe {
+        .game-section iframe {
             width: 100%;
-            height: 750px; /* Adjust as needed */
+            height: 650px; /* Adjust height to accommodate the game */
             border: none;
         }
 
-        .section {
+        .rules-section {
             background-color: #fff;
             padding: 40px 20px;
             margin-bottom: 30px;
@@ -63,34 +63,16 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
 
-        .section h2 {
+        .rules-section h2 {
             color: #333;
             margin-bottom: 20px;
             border-bottom: 3px solid #007bff;
             padding-bottom: 10px;
         }
 
-        .section p {
+        .rules-section p {
             color: #555;
             margin-bottom: 15px;
-        }
-
-        .section ul {
-            list-style: disc;
-            padding-left: 20px;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .section ul li {
-            margin-bottom: 8px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            color: #777;
-            font-size: 0.9em;
         }
 
         /* Modern Color Palette */
@@ -103,71 +85,57 @@
             background-color: #3498db; /* Bright Blue Header */
         }
 
-        .section {
+        .game-section {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .rules-section {
             background-color: #fff; /* White Section Background */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
-        .section h2 {
+        .rules-section h2 {
             color: #3498db;
             border-bottom-color: #3498db;
         }
 
-        .game-embed {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #2ecc71; /* Emerald Green Button */
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #27ae60;
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Boost Your Brain with Our Engaging Memory Test</h1>
-            <p>Challenge your recall skills and track your memory improvement online!</p>
+            <h1>Test Your Memory Skills Online</h1>
+            <p>Challenge yourself with our engaging memory game!</p>
         </div>
     </header>
 
     <div class="container">
-        <section class="game-embed">
-            <h2>Play the Memory Test Game Now!</h2>
-            <iframe src="https://memorytest-bwb.pages.dev/game" title="Memory Test Game"></iframe>
+        <section class="game-section">
+            <iframe src="game.html" title="Memory Test Game"></iframe>
         </section>
 
-        <section class="section">
-            <h2>What is Memory Test?</h2>
-            <p>Memory Test is a fun and challenging online game designed to help you exercise and improve your short-term memory. It presents a series of numerical sequences of increasing length, testing your ability to memorize and recall them accurately under time pressure.</p>
+        <section class="rules-section">
+            <h2>Game Rules</h2>
+            <p>This Memory Test game has 20 levels to challenge your brain. Here's how to play:</p>
+            <ul>
+                <li>Each level presents a number that you need to memorize within 5 seconds.</li>
+                <li>The number of digits increases with each level, starting from 1 digit and going up to 20 digits.</li>
+                <li>After the 5-second display, an input box will appear. Enter the number you remember.</li>
+                <li>Click the "Submit" button to check your answer.</li>
+                <li>A progress bar at the top shows your progress: green for correct answers, red for incorrect. Each of the 10 cells represents a segment of the 20 levels.</li>
+            </ul>
         </section>
 
-        <section class="section">
-            <h2>How to Play the Memory Test Game</h2>
-            <ol>
-                <li><strong>Start the Game:</strong> Click the "Start Game" button within the embedded game to begin your memory challenge.</li>
-                <li><strong>Observe the Number:</strong> In each level, a number will be displayed on the screen for 5 seconds. The length of the number increases with each level.</li>
-                <li><strong>Memorize Quickly:</strong> Focus and try to memorize the displayed number within the 5-second time limit.</li>
-                <li><strong>Recall and Input:</strong> After the time runs out, an input box will appear. Type in the number you just memorized.</li>
-                <li><strong>Submit Your Answer:</strong> Click the "Submit" button to check if your recall is correct.</li>
-                <li><strong>Track Your Progress:</strong> At the top of the game, a progress bar with 10 cells will show your performance. Green indicates a correct answer, and red indicates an incorrect answer. The progress bar represents segments of the 20 total levels.</li>
-                <li><strong>Advance Through Levels:</strong> The game consists of 20 levels, starting with single-digit numbers and progressing up to 20-digit numbers.</li>
-            </ol>
-        </section>
-
-        <section class="section">
+        <section class="rules-section">
             <h2>Scoring System</h2>
-            <p>Your score in the Memory Test game is based on the level you successfully complete. Here's the breakdown:</p>
+            <p>Your score is calculated based on the levels you successfully complete:</p>
             <ul>
                 <li>Level 1: 10 points</li>
                 <li>Level 2: 20 points</li>
@@ -176,28 +144,12 @@
                 <li>Level 10: 100 points</li>
                 <li>...</li>
                 <li>Level 20: 200 points</li>
+                <li>The total possible score is 1050 points.</li>
             </ul>
-            <p>The points awarded for each level are 10 times the level number. The maximum possible score is 1050 points.</p>
-        </section>
-
-        <section class="section">
-            <h2>Evaluate Your Memory Performance</h2>
-            <p>After completing all 20 levels, your total score will be displayed, along with an evaluation of your memory performance:</p>
+            <p><strong>Memory Performance Evaluation:</strong></p>
             <ul>
-                <li><strong>Excellent:</strong> Scores of 840 points and above indicate an excellent memory! The higher your score, the better your memory skills.</li>
-                <li><strong>Good:</strong> A good score means you have a solid memory. Keep practicing to improve further!</li>
-                <li><strong>Needs Practice:</strong> If your score is below a certain threshold, don't worry! Memory is a skill that can be improved with consistent practice.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Benefits of Playing Memory Test</h2>
-            <ul>
-                <li><strong>Improve Short-Term Memory:</strong> Regularly playing this game can help enhance your ability to retain information for short periods.</li>
-                <li><strong>Enhance Focus and Concentration:</strong> The game requires you to focus intently on the numbers, improving your concentration skills.</li>
-                <li><strong>Boost Cognitive Skills:</strong> Memory training is a great way to keep your brain active and improve overall cognitive function.</li>
-                <li><strong>Fun and Engaging:</strong> Unlike traditional memory exercises, this game provides a fun and interactive way to challenge your brain.</li>
-                <li><strong>Track Your Progress:</strong> The scoring system and level progression allow you to track your memory improvement over time.</li>
+                <li>840 points or higher: Excellent</li>
+                <li>The higher your score, the more excellent your memory!</li>
             </ul>
         </section>
     </div>
@@ -205,7 +157,6 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 MemoryTest.io - All Rights Reserved</p>
-            <p><a href="https://memorytest.8384857.xyz/game.html" target="_blank" rel="noopener noreferrer">Play Game Directly</a></p>
         </div>
     </footer>
 </body>
